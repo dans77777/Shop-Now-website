@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mycart</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/myhome.css">
+    <link rel="stylesheet" href="/styles/all.min.css">
+    <link rel="stylesheet" href="/styles/fontawesome.min.css">
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="navbar1">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="homepage.html"><img src="/img/logo.png" class="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto pl-4">
+                    <li class="nav-item active">
+                        <a class="nav-link text-dark" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="products.html">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="category.html">Category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="aboutus.html">About Us</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="contactus.html">Contact US</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+          
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <a href="search.html" class="btn btn-outline-success my-2 my-sm-0">Search
+                 </a>
+                 </form>
+                
+                <div class="cart pl-2"><a href="cart.html"><i class="fas fa-shopping-cart myicon"></i></a>
+                    <span class="badge badge-pill badge-danger"></span>
+                </div>
+        </nav>
+    </section>
+    <section class="cart py-5" id="cart">
+        <div class="container ">
+        <div class="section_title text-center mb-5">
+        <h1 class="text-capitalize">Cart</h1>
+        </div>
+        <div class="row cart-bg rounded">
+        <!--Grid column-->
+        <div class="col-md-8 border-right">
+        <!-- Card -->
+        <div class="mb-2">
+        <div class="pt-4">
+        <h5 class="mb-4">Cart (<span>4</span> items)</h5>
+        <div class="row mb-4">
+        <div class="col-md-5 col-lg-3 col-xl-3">
+        <div class="rounded mb-3 mb-md-0">
+        <img class="img-fluid w-100 rounded"
+        src="/img/p13.jpg"
+        alt="Sample">
+        </div>
+        </div>
+        <div class="col-md-7 col-lg-9 col-xl-9">
+        <div>
+        <div class="d-flex justify-content-between">
+        <div>
+        <h5>Grey pencil heels</h5>
+        <p class="mb-3 text-muted text-uppercase small">Sandal -
+        Grey</p>
+        <p class="mb-2 text-muted text-uppercase small">Color:
+        Grey</p>
+        <p class="mb-3 text-muted text-uppercase small">Size:
+        34</p>
+        </div>
+        <div>
+        <div class="mb-0 w-100">
+        <button
+        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+        class="btn btn-sm btn-outline-primary">
+        <i class="fas fa-minus"></i>
+        </button>
+        <input class="quantity text-center" min="0" max="10"
+        name="quantity"
+        value="1" type="number">
+        <button
+        onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+        class="btn btn-sm btn-outline-primary">
+        <i class="fas fa-plus"></i>
+        </button>
+        </div>
+        <small class="form-text text-muted text-center">
+        (Including GST)
+        </small>
+        </div>
+        </div>
+        <div class="d-flex justify-content-between align-items-center">
+        <div>
+        <a href="javascript:;" type="button"
+        class="small text-uppercase mr-3"><i
+        class="fas fa-trash-alt mr-1"></i> Remove from cart </a>
+        </div>
+        <p class="mb-0"><span><strong
+        id="summary">₹200.99</strong></span></p
+        class="mb-0">
+        </div>
+        </div>
+        </div>
+        </div>
+        <hr class="mb-4">
+        <div class="row mb-4">
+        <div class="col-md-5 col-lg-3 col-xl-3">
+        <div class="rounded mb-3 mb-md-0">
+        <img class="img-fluid w-100 rounded"
+        src="/img/p11.jpg"
+        alt="Sample">
+        </div>
+        </div>
+        <div class="col-md-7 col-lg-9 col-xl-9">
+        <div>
+        <div class="d-flex justify-content-between">
+        <div>
+        <h5>Black Heels</h5>
+        <p class="mb-3 text-muted text-uppercase small">wedges -
+        black</p>
+        <p class="mb-2 text-muted text-uppercase small">Color:
+        black</p>
+        <p class="mb-3 text-muted text-uppercase small">Size:
+        29</p>
+        </div>
+        <div>
+        <div class="mb-0 w-100">
+        <button
+        onclick="this.parentNode.querySelector('input[type=number]').stepDown()"
+        class="btn btn-sm btn-outline-primary">
+        <i class="fas fa-minus"></i>
+        </button>
+        <input class="quantity text-center" min="0" max="10"
+        name="quantity"
+        value="1" type="number">
+        <button
+        onclick="this.parentNode.querySelector('input[type=number]').stepUp()"
+        class="btn btn-sm btn-outline-primary">
+        <i class="fas fa-plus"></i>
+        </button>
+        </div>
+        </div>
+        </div>
+        <div class="d-flex justify-content-between align-items-center">
+        <div>
+        <a href="javascript:;" type="button"
+        class="card-link-secondary small text-uppercase mr-3">
+        <i class="fas fa-trash-alt mr-1"></i> Remove from cart
+        </a>
+        </div>
+        <p class="mb-0"><span><strong>₹700.99</strong></span></p
+        class="mb-0">
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        </div>
+        <!--Grid column-->
+        <!--Grid column-->
+        <div class="col-md-4 rounded">
+        <!-- Card -->
+        <div class="mb-3">
+        <div class="pt-4">
+        <h5 class="mb-3">Order summary</h5>
+        <ul class="list-group list-group-flush">
+        <li
+        class="list-group-item d-flex justify-content-between
+        align-items-center border-0 px-0 pb-2">
+        <span>Product name 1</span>
+        <span>x2</span>
+        <span>₹200.98</span>
+        </li>
+        <li
+        class="list-group-item d-flex justify-content-between
+        align-items-center border-0 px-0 pb-2">
+        <span>Product name 2</span>
+        <span>x2</span>
+        <span>₹700.98</span>
+        </li>
+        <li
+        class="list-group-item d-flex justify-content-between
+        align-items-center border-top px-0 mb-3">
+        <div>
+        <strong>Total amount</strong>
+        <strong>
+        <p class="mb-0">(including GST)</p>
+        </strong>
+        </div>
+        <span><strong>₹900.98</strong></span>
+        </li>
+        </ul>
+        <a href="checkout.html" class="btn btn-primary btn-block">
+        Checkout Deatils</a>
+        </div>
+        </div>
+        <!-- Card -->
+        </div>
+        <!--Grid column-->
+        </div>
+        </div>
+        </section>
+
+       
+          <div class="backtop">
+            <a id="button" href="#top" class="btn btn-lg btn-warning" role="button">
+            Back To Top <i class="fas fa-chevron-up text-dark"></i>
+            </a>
+            </div>
+    
+   <script src="js/main.js"></script>
+</body>
+</html>

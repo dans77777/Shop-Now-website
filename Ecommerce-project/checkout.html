@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product details</title>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+    <!--bootstrap-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/myhome.css">
+    <link rel="stylesheet" href="/styles/all.min.css">
+    <link rel="stylesheet" href="/styles/fontawesome.min.css">
+   
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="navbar1">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="homepage.html"><img src="/img/logo.png" class="logo"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto pl-4">
+                    <li class="nav-item active">
+                        <a class="nav-link text-dark" href="homepage.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="products.html">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="category.html">Category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="aboutus.html">About Us</a>
+
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="contactus.html">Contact US</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+          
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <a href="search.html" class="btn btn-outline-success my-2 my-sm-0">Search
+                   </a>
+                   </form>
+                <div class="cart pl-2"><a href="cart.html"><i class="fas fa-shopping-cart myicon"></i></a>
+                    <span class="badge badge-pill badge-danger"></span>
+                </div>
+        </nav>
+    </section>
+    <div class="container-fluid checkout">
+    <div class="container pb-5">
+        <h1 class="text-center pb-5 pt-5 ">Checkout</h1>
+        <div class="row pt-0">
+          <div class="col-sm-9 col-md-6 col-lg-8 pb-5  checkform">
+            <form action="order.html" method="GET" id="form" onsubmit="return formValidation();">
+
+
+                <div class="form-row">
+                  <div class="col-md-4 mb-3">
+                    <label for="validationCustom01">First name</label>
+                    <input type="text" class="form-control" id="name" placeholder="First name"  required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="validationCustom02">Last name</label>
+                    <input type="text" class="form-control" id="lname" placeholder="Last name"  required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="validationCustomUsername">Username</label>
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text" id="username">@</span>
+                      </div>
+                      <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
+                      <div class="invalid-feedback">
+                        Please choose a username.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-row ">
+                  <div class="col-md-6 mb-3">
+                    <label for="validationCustom03">City</label>
+                    <input type="text" class="form-control" id="city" placeholder="City" required>
+                    <div class="invalid-feedback">
+                      Please provide a valid city.
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="validationCustom04">State</label>
+                    <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
+                    <div class="invalid-feedback">
+                      Please provide a valid state.
+                    </div>
+                  </div>
+                  <div class="col-md-3 mb-3">
+                    <label for="validationCustom05">Zip</label>
+                    <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
+                    <div class="invalid-feedback">
+                      Please provide a valid zip.
+                    </div>
+                  </div>
+                </div>
+               
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Address</label>
+                    <textarea class="form-control" id="addrs" rows="3"></textarea>
+                  </div>
+                  <div class="form-group">
+                  <label >Payment Method</label>
+                  <div class="form-check">
+                   
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                      Cash on delivery
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                      Credit card
+                    </label>
+                  </div>
+                  <div class="form-check disabled">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" >
+                    <label class="form-check-label" for="exampleRadios3">
+                      Debit card
+                    </label>
+                  </div>
+                  <div class="form-check disabled">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option3" >
+                    <label class="form-check-label" for="exampleRadios4">
+                      Paypal
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="cnum">Card Number</label>
+                      <input type="text" class="form-control" id="cnum">
+                      <div class="invalid-feedback">
+                          <h5>please enter valid card number</h5>
+                      </div>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="cname"> Name on Card</label>
+                        <input type="text" class="form-control" id="cname">
+                        <small class="text-muted gy-0">Enter full name same as on card</small>
+                        <div class="invalid-feedback">
+                            <h5>please enter valid card name same as on card</h5>
+                        </div>
+                      </div>
+                </div>
+                    <div class="form row">
+                    <div class="col-md-2">
+                      <label for="cvv">CVV</label>
+                      <input type="password number" class="form-control" id="cvv">
+                      <div class="invalid-feedback">
+                        Please provide a valid CVV.
+                      </div>
+                      </div>
+                      <div class="col-md-4">
+                        <label for="exdate">Expiration</label>
+                        <input type="Date" class="form-control" id="exdate">
+                        <div class="invalid-feedback">
+                          Please provide a valid CVV.
+                        </div>
+                        </div>
+                      
+                    </div>
+                   
+                  </div>
+               
+                  <div class="form-group">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                      <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                      </label>
+                      <div class="invalid-feedback">
+                        You must agree before submitting.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mybtn">
+                    <button type="submit" class="btn btn-primary" >Purchase</button>
+                  </div>
+                    </form>
+              
+              <script>
+              // Example starter JavaScript for disabling form submissions if there are invalid fields
+              (function() {
+                'use strict';
+                window.addEventListener('load', function() {
+                  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                  var forms = document.getElementsByClassName('needs-validation');
+                  // Loop over them and prevent submission
+                  var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                      if (form.checkValidity() === false) {
+                        event.preventDefault();
+                        event.stopPropagation();
+                      }
+                      form.classList.add('was-validated');
+                    }, false);
+                  });
+                }, false);
+              })();
+              </script>
+          </div>
+          <div class="col-sm-3 col-md-6 col-lg-4" style="background-color:pink;">
+            
+                <!-- Card -->
+                <div class="mb-3">
+                <div class="pt-4">
+                <h5 class="mb-3">Order summary</h5>
+                <ul class="list-group list-group-flush olsum">
+                <li
+                class="list-group-item d-flex justify-content-between
+                align-items-center border-0 px-3 pb-2">
+                <span>Product name 1</span>
+                <span>x2</span>
+                <span>₹200.98</span>
+                </li>
+                <li
+                class="list-group-item d-flex justify-content-between
+                align-items-center border-0 px-3 pb-2">
+                <span>Product name 2</span>
+                <span>x2</span>
+                <span>₹700.98</span>
+                </li>
+                <li
+                class="list-group-item d-flex justify-content-between
+                align-items-center border-top px-0 mb-3">
+                <div>
+                <strong>Total amount</strong>
+                <strong>
+                <p class="mb-0">(including GST)</p>
+                </strong>
+                </div>
+                <span><strong>₹900.98</strong></span>
+                </li>
+                </ul>
+              
+                <img class=" img-fluid" src="/img/cartimg.jpg">
+                </div>
+                </div>
+                <!-- Card -->
+                </div>
+                <!--Grid column-->
+               
+                </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+      <section class="features">
+        <main role="main">
+      
+      
+          <div class="album py-5">
+            <div class="container">
+              <div class="section_title text-center mb-5 text-danger text-capitalize">
+                <h1 class="text-capitalize">Our features</h1>
+              </div>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="card mb-4 box-shadow">
+                    <p class="card-text mt-3" style="text-align: center; font-weight: bold; ">Secure Payment</p>
+                    <div class="inner">
+                       <i class="fas fa-key"></i>
+                    </div>
+                    <div class="card-body bg-light">
+                      <div class="d-flex justify-content-between align-items-center">
+                        <p> We Dhanashree online sellers puts the safety of our customers as our highest priority,
+      
+                          No credit or debit card information is stored on our website, and we are utilizing third-party payment processors (Digital Popular Services, and its Blue brand) that are responsible for processing such payments and charges.
+                          
+                          </p>
+                      
+      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3 ">
+                  <div class="card mb-4 box-shadow">
+                    <p class="card-text mt-3" style="text-align: center; font-weight: bold;">Free shipping</p>
+                    <div class="inner">
+                      <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <div class="card-body bg-light">
+                     
+                      <div class="d-flex justify-content-between align-items-center">
+                        <p>Dhanashree online sellers offers free shipping within India on all products. We pay for shipping, octroi and other taxes. You only pay the value of the ordered product.
+                          We currently ship products only within India. You can place orders from across the world but delivery addresses are restricted to India.</p>
+                      
+      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card mb-4 box-shadow">
+                    <p class="card-text mt-3" style="text-align: center; font-weight: bold;">Easy Return/Exchange</p>
+                    <div class="inner">
+                      <i class="fas fa-exchange-alt"></i>
+                    </div>
+                    <div class="card-body bg-light">
+                     
+                      <div class="d-flex justify-content-between align-items-center">
+                        
+                        <p>If for any reason, you are not completely satisfied with your purchase, you may return it for up to 30 days from the original purchase date for a refund or credit note. In order to do so the item(s) must be in new, unworn condition with all packaging and garment tags still attached.</p>
+                      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="card mb-4 box-shadow">
+                    <p class="card-text mt-3" style="text-align: center; font-weight: bold;">Surprising Gifts</p>
+                    <div class="inner">
+                      <i class="fas fa-gifts"></i>
+                    </div>
+                    <div class="card-body bg-light">
+                     
+                      <div class="d-flex justify-content-between align-items-center">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa inventore at, quo voluptatem amet veniam debitis autem, suscipit rem voluptates et maiores nesciunt itaque voluptas nulla dolores sunt placeat voluptate!</p>
+                      
+      
+                      </div>
+                    </div>
+                  </div>
+                </div>
+      
+      
+        </main>
+      </section>
+      <section class="footer">
+        <div class="pl-5 pt-2">
+        <footer class="pt-4 md-5  border-top">
+          <div class="row">
+            <div class="col-12 col-md ft">
+              <img class="  mb-2" src="/img/ft.jpg" alt="">
+              <small class="d-block mb-3 text-muted">© 2017-2020</small>
+            </div>
+            <div class="col-6 col-md">
+              <h3 class="pb-2">Company</h3>
+              <ul class="list-unstyled text-small text-light">
+                <li><a class="text-muted" href="#">About US</a></li>
+                <li><a class="text-muted" href="#">Terms and conditions</a></li>
+                <li><a class="text-muted" href="#">Team feature</a></li>
+                <li><a class="text-muted" href="#">Stuff for developers</a></li>
+                <li><a class="text-muted" href="#">Privacy policy</a></li>
+                
+              </ul>
+            </div>
+            <div class="col-6 col-md">
+              <h3 class="pb-2">Contact</h3>
+              <ul class="list-unstyled text-small text-light">
+                <li><a class="text-muted" href="#">dsgodase22@gmail.com</a></li>
+                <li><a class="text-muted" href="#">8975677477</a></li>
+                <li><a class="text-muted" href="#">+20127865</a></li>
+               
+              </ul>
+            </div>
+            <div class="col-6 col-md">
+              <h3 class="pb-2">Tech support</h3>
+              <ul class="list-unstyled text-small text-light">
+                <li><a class="text-muted" href="#">Installation Guide</a></li>
+                <li><a class="text-muted" href="#">see Tutorials</a></li>
+                <li><a class="text-muted" href="#">Activate</a></li>
+                <li><a class="text-muted" href="#">Contact support</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="border-top">
+            <h6 class="text-center mt-3">Copyright ©2020 All rights reserved
+            </h6>
+            </div>
+        </footer>
+      </div>
+      </section>
+      <div class="backtop">
+        <a id="button" href="#top" class="btn btn-lg btn-warning" role="button">
+        Back To Top <i class="fas fa-chevron-up text-dark"></i>
+        </a>
+        </div>
+        <script src="/js/main.js"></script>
+</body>
+</html>
+
+<script>
+  
+
+  //form validation with javascript
+  function formValidation()
+  {
+      //Get Value
+      var name = document.getElementById('#name').value.trim();
+      var lname = document.getElementById('#lname').value.trim();
+      var username = document.getElementById('#username').value.trim();
+      var city = document.getElementById('#city').value.trim();
+
+      var isValidForm = true;       
+
+      //Validation Conditions here
+      if (name.length < 1) {
+          alert("Name is Required!");
+          var isValidForm = false;
+      }   
+      if (lname.length < 1) {
+          alert("please enter your last name");
+          var isValidForm = false;
+      }       
+      else if (username.length < 1) {
+          alert("please enter your username");
+          var isValidForm = false;
+      } 
+      else if (city.length < 1) {
+          alert("city is Required!");
+          var isValidForm = false;
+      }
+      else
+      {
+          isValidForm = true;
+      }
+
+      return isValidForm;  //if isValidForm is true then form submits else submission is stopped
+      
+  }
+
+  
+  
+  $(document).ready(function () {
+
+      $('#form').submit(function (e) {
+
+          //Get Value
+         
+          var email = $('#email').val().trim();
+          var query= $('#query').val().trim();
+
+          //reset the errors
+          $(".error").remove();
+
+          var isValidForm = true; 
+
+          
+          
+          if (email.length < 1) {
+              $('#email').after('<span class="error">please enter your mail</span>');
+              var isValidForm = false;
+          } 
+
+          if (query.length < 1) {
+              $('#query').after('<span class="error">please mention your query</span>');
+              var isValidForm = false;
+          }
+
+          return isValidForm;  //if isValidForm is true then form submits else submission is stopped
+                   
+      });
+
+  });
+
+
+</script>
+
